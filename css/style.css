@@ -1,0 +1,99 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+.theme1{
+--bgColor:rgb(0, 153, 255);
+--bgFontColor:#ffffff;
+--shadow:0px 0px 20px rgb(0 0 0 / 40%);
+--font1:JosefinSans-Bold;
+--font2:JosefinSans-Medium;
+--font3:JosefinSans-Regular;
+}
+.theme2{
+--bgColor:rgb(255, 0, 179);
+--bgFontColor:#ffffff;
+--shadow:0px 0px 20px rgb(0 0 0 / 40%);
+--font1:JosefinSans-Bold;
+--font2:JosefinSans-Medium;
+--font3:JosefinSans-Regular;
+}
+.theme3{
+--bgColor:rgb(9, 85, 2);
+--bgFontColor:#ffffff;
+--shadow:0px 0px 20px rgb(0 0 0 / 40%);
+--font1:JosefinSans-Bold;
+--font2:JosefinSans-Medium;
+--font3:JosefinSans-Regular;
+}
+.theme4{
+--bgColor:rgb(1, 10, 0);
+--bgFontColor:#ffffff;
+--shadow:0px 0px 20px rgb(0 0 0 / 40%);
+--font1:JosefinSans-Bold;
+--font2:JosefinSans-Medium;
+--font3:JosefinSans-Regular;
+}
+@font-face {
+font-family:JosefinSans-Bold;
+src: url('../fonts/JosefinSans-Bold.ttf');
+}
+@font-face {
+font-family:JosefinSans-Medium;
+src: url('../fonts/JosefinSans-Medium.ttf');
+}
+@font-face {
+font-family:JosefinSans-Regular;
+src: url('../fonts/JosefinSans-Regular.ttf');
+}
+.container_full{width: 100%;}
+.container{max-width: 1200px;margin: 0 auto;padding: 2rem 0rem;}
+/* commonHeading */
+.commonHeading {text-align: center;display: grid;justify-content: center;}
+.commonHeading h1{margin-bottom: 0.5rem;font-family:var(--font1);}
+.underline{width:auto;height: 5px;background-color: var(--bgColor);border-radius:50%;}
+/* navigation css */
+.navigation{display: grid;background-color:var(--bgColor);align-items: center;position: relative;
+padding: 1rem;box-shadow:var(--shadow);z-index: 100;}
+.brand h1 a{color: var(--bgFontColor);text-decoration: none;font-size: 2rem;font-family:var(--font1);}
+.rightMenu{display:grid;grid-template-columns:70% 30%;position: absolute;top: 15px;
+right: 30px;grid-gap:10px;text-align: right;}
+.fa-bars{font-size: 2rem;color: var(--bgFontColor);cursor: pointer;}
+.selectBar{border-radius: 16px;padding: 0rem 0.5rem;border: none;outline: none;cursor: pointer;}
+.menulist{list-style: none;width: 50%;height: 100vh;background-color: var(--bgColor);padding: 1rem;position: absolute;left: 0;top: 0;box-shadow: var(--shadow);display: grid;justify-content: center;align-items: center;transform: translateX(-100%);transition: all 0.5s;z-index: 100;
+font-family:var(--font2);}
+.mask{width: 100%;height: 100vh;background-color:rgb(0 0 0 / 60%);position: absolute;left: 0;top: 0;
+cursor: pointer;opacity: 0;display: none;transition: all 0.7s;}
+.slideMenu{transform: translateX(0%);}
+.fade{opacity: 1;display: block;}
+.menulist li{line-height: 2.5rem;}
+.menulist li a{text-decoration: none;font-size: 1.3rem;color: var(--bgFontColor);}
+/* cards css */
+.row{display: grid;grid-template-columns: repeat(3,1fr);grid-gap: 20px;padding: 2rem 5.5rem;}
+.cardsBox{width:100%;min-height: 400px;max-height: 100%;box-shadow:var(--shadow);border-radius: 16px;}
+.cardImage{width: 100%;padding: 1rem;position: relative;background-color: var(--bgColor);height: 120px;
+border-radius: 16px 16px 0px 0px;}
+.innerBoxImage{width: 100px;height: 100px;border-radius: 50%;border: 5px solid var(--bgColor);
+margin:0 auto;position: absolute;bottom: -3rem;left: 35%;}
+.innerBoxImage img{width: 100%;height: 100%;border-radius: 50%;object-fit: cover;}
+.cardtypograpgy{padding: 4rem 1rem;text-align: center;}
+.cardtypograpgy h4, h5, p{margin-bottom: 0.5rem;font-family:var(--font2);}
+.cardtypograpgy h4,h5{font-size: 14px;font-weight: bold;text-transform: capitalize;}
+.cardtypograpgy h4{color: var(--bgColor);}
+.cardtypograpgy h5{color: rgb(129 127 127);}
+.followBox, .buttons{display: flex;justify-content: space-around;padding: 1rem 0rem;}
+.followers h3{font-size: 1.6rem;font-weight: normal;color: rgb(66, 66, 66);font-family:var(--font3);}
+.followers p{color: var(--bgColor);font-weight: bold;text-transform: capitalize;font-size: 14px;}
+.btn{background-color: var(--bgColor);padding: 0.5rem 2rem;border-radius:20px;
+border: 2px solid var(--bgColor);font-size: 14px;text-transform: capitalize;cursor: pointer;
+font-weight: bold;font-family:var(--font3);}
+.btn:first-child{color: #fff;}
+.btn:last-child{background-color: transparent;color:var(--bgColor);}
+.btngrp{display: flex;justify-content: space-around;background-color: #fff;
+box-shadow:var(--shadow);padding: 1rem;}
+/* media */
+@media only screen and (max-width:767px) {
+.menulist{box-shadow: none;width: 70%;}
+.row{display: block;padding: 2rem 2.5rem;}
+.cardsBox{margin-bottom: 2rem;}
+}
+@media only screen and (min-width:768px) and (max-width:1024px) {
+.row{display: grid;grid-template-columns: repeat(2,1fr);}
+}
